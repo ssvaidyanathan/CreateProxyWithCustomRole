@@ -3,6 +3,7 @@
 ## Create Org Admin Credentials in an encrypted KVM using the following [API](http://docs.apigee.com/management/apis/post/organizations/%7Borg_name%7D/keyvaluemaps/%7Bmap_name%7D/entries)
 
 	KVM Name: PFCredsOrg
+	
 	Payload: 
 	{
 	  "name" : "OrgAdminCreds",
@@ -14,8 +15,8 @@
 ## Once the KVM is created, run the following command
 	mvn clean install -Ptest -Dorg=<org> -Dusername=<username> -Dpassword=<password> -Dapigee.config.options=update
 
-	Note: The pom file is pointing to the Apigee Public SaaS Management Server, if you are using Private cloud, 
-	please update the apigee.hosturl info in the profiles
+***Note: The pom file is pointing to the Apigee Public SaaS Management Server, if you are using Private cloud, 
+	please update the apigee.hosturl info in the profiles***
 
 The above should create Target Server and also deploy the bundle to your Apigee Org
 
@@ -31,6 +32,7 @@ curl -X POST \
   "role": "someRole"
 }'
 ```
+
 This should create a proxy and also assign the custom role permissions to this newly created proxy
 
 ***NOTE: In the [edge.json](./edge.json) file, I have configured the target server to point to the Apigee SaaS Management Server.
