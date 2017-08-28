@@ -1,16 +1,25 @@
 # Create Proxy With Custom Role
 
-## Create Org Admin Credentials in an encrypted KVM using the following [API](http://docs.apigee.com/management/apis/post/organizations/%7Borg_name%7D/keyvaluemaps/%7Bmap_name%7D/entries)
-
-	KVM Name: PFCredsOrg
+## Create Org Admin Credentials in an encrypted KVM 
 	
-	Payload: 
-	{
-	  "name" : "OrgAdminCreds",
-	  "value" : "Basic <auth>"
-	}
+	```
+	curl -X POST \
+		  https://<mgmt-server-host>/v1/organizations/<org>/keyvaluemaps \
+		  -H 'authorization: Basic <auth>' \
+		  -H 'content-type: application/json' \
+		  -d '{   
+		 "name" : "PFCredsOrg",
+		 "encrypted" : "true",
+		 "entry" : [ 
+		  {
+		   "name" : "OrgAdminCreds",
+		   "value" : "Basic <auth>"
+		  }
+		 ]
+		}'
+	```
 
-	NOTE: Please provide your base64 encoded value above
+	NOTE: Please provide your base64 encoded value above. Do not change anything else in the request payload
 
 ## Once the KVM is created, run the following command
 	mvn clean install -Ptest -Dorg=<org> -Dusername=<username> -Dpassword=<password> -Dapigee.config.options=update
