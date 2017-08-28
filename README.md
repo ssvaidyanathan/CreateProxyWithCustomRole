@@ -2,7 +2,6 @@
 
 ## Create Org Admin Credentials in an encrypted KVM 
 	
-	```
 	curl -X POST \
 		  https://<mgmt-server-host>/v1/organizations/<org>/keyvaluemaps \
 		  -H 'authorization: Basic <auth>' \
@@ -17,9 +16,9 @@
 		  }
 		 ]
 		}'
-	```
+	
 
-	NOTE: Please provide your base64 encoded value above. Do not change anything else in the request payload
+	***NOTE: Please provide your base64 encoded value above. Do not change anything else in the request payload***
 
 ## Once the KVM is created, run the following command
 	mvn clean install -Ptest -Dorg=<org> -Dusername=<username> -Dpassword=<password> -Dapigee.config.options=update
