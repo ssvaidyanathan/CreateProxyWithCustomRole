@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="2" name="CreateProxyWithCustomRole">
+    <Basepaths>/createproxywithcustomrole</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1503954843651</CreatedAt>
+    <CreatedBy>ssvaidyanathan@apigee.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>CreateProxyWithCustomRole</DisplayName>
+    <LastModifiedAt>1503954843651</LastModifiedAt>
+    <LastModifiedBy>ssvaidyanathan@apigee.com</LastModifiedBy>
+    <Policies>
+        <Policy>AM-Buiild-Set-Permissions-Request</Policy>
+        <Policy>Extract-Create-Proxy-Request</Policy>
+        <Policy>JSC-Build-Target-URL</Policy>
+        <Policy>KVM-Get-OrgAdmin-Creds</Policy>
+        <Policy>SC-Create-Proxy</Policy>
+        <Policy>SC-Error-Response</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>jsc://JSC-Build-Target-URL.js</Resource>
+        <Resource>jsc://print.js</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

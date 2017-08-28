@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<AssignMessage async="false" continueOnError="false" enabled="true" name="AM-Buiild-Set-Permissions-Request">
+    <DisplayName>AM-Buiild-Set-Permissions-Request</DisplayName>
+    <Properties/>
+    <Set>
+        <Headers>
+            <Header name="Authorization">{private.orgAdminCreds}</Header>
+        </Headers>
+        <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+            {
+             "path" : "/applications/@createProxyReqPrefix.api#",
+             "permissions" : [ "put", "get", "delete" ]
+            }
+        </Payload>
+        <Verb>POST</Verb>
+        <Path/>
+    </Set>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <AssignTo createNew="false" transport="http" type="request"/>
+</AssignMessage>

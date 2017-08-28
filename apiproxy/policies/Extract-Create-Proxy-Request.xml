@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ExtractVariables async="false" continueOnError="false" enabled="true" name="Extract-Create-Proxy-Request">
+    <DisplayName>Extract-Create-Proxy-Request</DisplayName>
+    <Properties/>
+    <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
+    <JSONPayload>
+        <Variable name="org">
+            <JSONPath>$.org</JSONPath>
+        </Variable>
+        <Variable name="api">
+            <JSONPath>$.api</JSONPath>
+        </Variable>
+        <Variable name="role">
+            <JSONPath>$.role</JSONPath>
+        </Variable>
+    </JSONPayload>
+    <Source clearPayload="false">request</Source>
+    <VariablePrefix>createProxyReqPrefix</VariablePrefix>
+</ExtractVariables>

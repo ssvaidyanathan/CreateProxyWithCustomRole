@@ -1,0 +1,18 @@
+{
+    "version": "1.0",
+    "envConfig": {
+        "test": {
+          "targetServers": [
+              {
+                "name": "ApigeeMgmtHost",
+                "host": "api.enterprise.apigee.com",
+                "isEnabled": true,
+                "port": 443,
+                "sSLInfo": {
+                    "enabled": "true"
+                }
+            }
+          ]
+        }
+    }
+}

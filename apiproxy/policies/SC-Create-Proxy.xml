@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ServiceCallout async="false" continueOnError="false" enabled="true" name="SC-Create-Proxy">
+    <DisplayName>SC-Create-Proxy</DisplayName>
+    <Properties/>
+    <Request clearPayload="true" variable="myRequest">
+        <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+        <Set>
+            <Headers>
+                <Header name="Authorization">{private.orgAdminCreds}</Header>
+            </Headers>
+            <Payload contentType="application/json" variablePrefix="@" variableSuffix="#">
+            {"name": "@createProxyReqPrefix.api#"}
+        </Payload>
+        </Set>
+    </Request>
+    <Response>calloutResponse</Response>
+    <HTTPTargetConnection>
+        <LoadBalancer>
+            <Server name="ApigeeMgmtHost"/>
+        </LoadBalancer>
+        <Path>/v1/organizations/{createProxyReqPrefix.org}/apis</Path>
+    </HTTPTargetConnection>
+    <!-- <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://api.enterprise.apigee.com</URL>
+    </HTTPTargetConnection> -->
+</ServiceCallout>

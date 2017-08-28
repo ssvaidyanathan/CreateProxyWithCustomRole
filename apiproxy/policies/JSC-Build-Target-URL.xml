@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="200" name="JSC-Build-Target-URL">
+    <DisplayName>JSC-Build-Target-URL</DisplayName>
+    <Properties/>
+    <ResourceURL>jsc://JSC-Build-Target-URL.js</ResourceURL>
+</Javascript>
