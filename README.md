@@ -33,7 +33,7 @@ curl -X POST \
 ```
 This should create a proxy and also assign the custom role permissions to this newly created proxy
 
-NOTE: In the [edge.json](./edge.json) file, I have configured the target server to point to the Apigee SaaS Management Server.
-Please update the entry (host, port) to point to your Private Mgmt Server host if you are on Private Cloud
+***NOTE: In the [edge.json](./edge.json) file, I have configured the target server to point to the Apigee SaaS Management Server.
+Please update the entry (host, port) to point to your Private Mgmt Server host if you are on Private Cloud***
 
-NOTE: If you have other environments, please extend the pom.xml profiles to include those and call them via Maven using -P
+***NOTE: If you have other environments, please extend the pom.xml profiles to include those and call them via Maven using -P***
