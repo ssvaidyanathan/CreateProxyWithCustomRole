@@ -32,3 +32,5 @@ curl -X POST \
 }'
 ```
 This should create a proxy and also assign the custom role permissions to this newly created proxy
+
+NOTE: If you have other environments, please extend the pom.xml profiles to include those and call them via Maven using -P
