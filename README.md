@@ -1,5 +1,8 @@
 # Create Proxy With Custom Role
 
+## Clone this repo
+	git clone https://github.com/ssvaidyanathan/CreateProxyWithCustomRole.git
+
 ## Create Org Admin Credentials in an encrypted KVM 
 	
 	curl -X POST \
