@@ -14,7 +14,8 @@
 ## Once the KVM is created, run the following command
 	mvn clean install -Ptest -Dorg=<org> -Dusername=<username> -Dpassword=<password> -Dapigee.config.options=update
 
-	Note: The pom file is pointing to the Apigee Public SaaS Management Server, if you are using Private cloud, please update the apigee.hosturl info in the profiles
+	Note: The pom file is pointing to the Apigee Public SaaS Management Server, if you are using Private cloud, 
+	please update the apigee.hosturl info in the profiles
 
 The above should create Target Server and also deploy the bundle to your Apigee Org
 
