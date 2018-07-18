@@ -10,7 +10,7 @@
 		  -H 'authorization: Basic <auth>' \
 		  -H 'content-type: application/json' \
 		  -d '{   
-		 "name" : "PFCredsOrg",
+		 "name" : "OrgCreds",
 		 "encrypted" : "true",
 		 "entry" : [ 
 		  {
