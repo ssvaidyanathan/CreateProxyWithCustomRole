@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KVM-Get-OrgAdmin-Creds" mapIdentifier="PFCredsOrg">
+<KeyValueMapOperations async="false" continueOnError="false" enabled="true" name="KVM-Get-OrgAdmin-Creds" mapIdentifier="OrgCreds">
     <DisplayName>KVM-Get-OrgAdmin-Creds</DisplayName>
     <Properties/>
     <ExclusiveCache>false</ExclusiveCache>
